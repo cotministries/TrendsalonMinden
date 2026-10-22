@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trendsalon Petra Schröder | Friseur &amp; Fußpflege in Minden</title>
+<meta name="description" content="Trendsalon Petra Schröder in Minden: Schnitt, Farbe, Dauerwelle, Maniküre und medizinische Fußpflege. Greisenbruchstr. 16, Tel. 0571 97204030.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Layout: calm, very readable salon page for a loyal, often older clientele. Navy + warm orange taken from their existing logo. Large type on purpose. */
+:root{
+  --paper:#ffffff; --sand:#faf5ef; --navy:#16305c; --navy-2:#24447a; --ink:#1c2230; --muted:#5d6574; --line:#e8e1d8;
+  --orange:#e8751a; --orange-soft:#fde9d7;
+  --display:"Young Serif",Georgia,"Times New Roman",serif;
+  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;line-height:1.12;text-wrap:balance;color:var(--navy)}
+h2{font-size:clamp(32px,4.4vw,46px)}
+.kicker{font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:12px;font-weight:700;text-decoration:none;border:2px solid transparent;font-size:17px;cursor:pointer;font-family:var(--body);transition:background .15s,color .15s}
+.btn-orange{background:var(--orange);color:#fff}
+.btn-orange:hover{background:#cf6311}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2)}
+.btn-line{border-color:var(--navy);color:var(--navy);background:transparent}
+.btn-line:hover{background:var(--navy);color:#fff}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+svg.i{width:20px;height:20px;flex:none}
+.ph{background:linear-gradient(135deg,#dfe6f1,#9fb0cc)}
+
+.demo-note{background:var(--navy);color:#cfd8e8;font-size:14px;text-align:center;padding:8px 0}
+.demo-note b{color:#fff}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:28px;padding-block:12px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:12px}
+.brand .logo{height:58px;width:auto;display:block}
+@media (max-width:420px){.brand span{display:none}}
+.brand .dots{display:flex}
+.brand .dots i{width:22px;height:22px;border-radius:50%;display:block}
+.brand .dots i:first-child{background:var(--orange)}
+.brand .dots i:last-child{background:var(--navy);margin-left:-8px;mix-blend-mode:multiply}
+.brand b{font-family:var(--display);font-weight:400;font-size:24px;color:var(--navy);display:block;line-height:1}
+.brand small{font-size:13px;color:var(--muted);letter-spacing:.06em}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 0 0 auto;padding:0;font-weight:700;font-size:16px}
+.nav ul a{text-decoration:none;color:var(--ink)}
+.nav ul a:hover{color:var(--orange)}
+.nav .btn{padding:11px 18px;font-size:16px}
+@media (max-width:920px){.nav ul{display:none}.nav .btn{margin-left:auto}}
+@media (max-width:420px){.nav .btn span{display:none}}
+
+/* hero */
+.hero{background:var(--sand);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:52px;align-items:center;padding-block:60px}
+.hero h1{font-size:clamp(42px,6.2vw,74px);margin:14px 0 20px}
+.hero h1 span{color:var(--orange)}
+.hero p{font-size:20px;color:var(--ink);max-width:40ch;margin:0 0 28px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.since{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 6px;font-weight:700;font-size:15px;color:var(--navy)}
+.since b{background:var(--navy);color:#fff;border-radius:999px;padding:3px 10px;font-size:13px}
+.hero-photos{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:440px}
+.hero-photos figure{margin:0;border-radius:18px;overflow:hidden}
+.hero-photos figure:first-child{grid-row:span 2}
+.hero-photos img{width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:32px;padding-block:40px}.hero-photos{height:320px}}
+
+/* info */
+.info{background:var(--navy);color:#fff}
+.info .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.info .cell{padding:24px;border-left:1px solid rgba(255,255,255,.15)}
+.info .cell:first-child{border-left:0;padding-left:0}
+.info small{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#a9b8d3;font-weight:700}
+.info b{font-size:19px;font-variant-numeric:tabular-nums}
+.info a{text-decoration:none}
+@media (max-width:760px){.info .wrap{grid-template-columns:1fr}.info .cell{border-left:0;border-top:1px solid rgba(255,255,255,.15);padding-left:0}.info .cell:first-child{border-top:0}}
+
+section{padding-block:80px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+.sec-head p{max-width:46ch;color:var(--muted);margin:0}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.member{text-align:left}
+.member .pic{aspect-ratio:4/5;max-width:100%;border-radius:20px;overflow:hidden;margin-bottom:16px}
+.member .pic img{width:100%;height:100%;object-fit:cover;object-position:top}
+.member h3{font-size:26px}
+.member p{margin:4px 0 0;color:var(--muted)}
+.member .tag{display:inline-block;margin-top:10px;background:var(--orange-soft);color:#9a4708;font-weight:700;font-size:14px;padding:4px 12px;border-radius:999px}
+@media (max-width:760px){.team{grid-template-columns:1fr 1fr}.member:first-child{grid-column:1/-1}.member:first-child .pic{aspect-ratio:16/12}}
+
+/* quote */
+.quote{background:var(--sand)}
+.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.quote blockquote{margin:0;font-family:var(--display);font-size:clamp(30px,4vw,44px);color:var(--navy);line-height:1.2}
+.quote blockquote::before{content:"„";color:var(--orange)}
+.quote blockquote::after{content:"“";color:var(--orange)}
+.quote p{color:var(--ink);max-width:52ch}
+@media (max-width:860px){.quote-grid{grid-template-columns:1fr;gap:20px}}
+
+/* prices */
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.pcard{border:1px solid var(--line);border-radius:22px;padding:30px}
+.pcard h3{font-size:28px;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.pcard h3 i{width:14px;height:14px;border-radius:50%;background:var(--orange);display:inline-block}
+.prow{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.prow:last-child{border-bottom:0}
+.prow span{min-width:0}
+.prow small{display:block;color:var(--muted);font-size:15px}
+.prow b{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--navy);text-align:right}
+.prow b.multi{white-space:normal}
+.notes{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.note{background:var(--sand);border-radius:16px;padding:18px 20px;font-size:16px;color:var(--ink)}
+.note b{display:block;color:var(--navy);margin-bottom:2px}
+@media (max-width:860px){.price-grid{grid-template-columns:1fr}.notes{grid-template-columns:1fr}.pcard{padding:22px}}
+
+/* foot care */
+.foot-care{background:var(--navy);color:#fff}
+.foot-care h2,.foot-care h3{color:#fff}
+.foot-care .kicker{color:#ffb071}
+.fc-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:start}
+.fc-photo{border-radius:20px;overflow:hidden;aspect-ratio:4/3;max-width:100%}
+.fc-photo img{width:100%;height:100%;object-fit:cover}
+.fc-grid p{color:#d6deec;max-width:54ch}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0}
+.fact{background:rgba(255,255,255,.08);border-radius:14px;padding:16px;text-align:center}
+.fact b{display:block;font-family:var(--display);font-size:40px;color:#ffb071;line-height:1;font-variant-numeric:tabular-nums}
+.fact span{font-size:15px;color:#d6deec}
+.fc-prices{background:#fff;color:var(--ink);border-radius:20px;padding:10px 24px;margin-top:8px}
+.fc-prices .prow{border-color:var(--line)}
+.fc-contact{margin-top:20px;font-size:17px;color:#d6deec}
+.fc-contact b{color:#fff}
+.fc-contact .sel{user-select:all;color:#ffb071}
+@media (max-width:860px){.fc-grid{grid-template-columns:1fr;gap:28px}.fc-prices{padding:6px 18px}}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{border:1px solid var(--line);border-radius:22px;padding:30px}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin-top:12px}
+.hours td{padding:12px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-weight:700}
+.hours tr.closed td{color:var(--muted)}
+.hours tr.closed td:last-child{font-weight:400}
+.hours tr.today td{color:var(--orange)}
+.status{margin-top:16px;font-weight:700;display:flex;align-items:center;gap:10px}
+.status i{width:11px;height:11px;border-radius:50%;background:#16a34a}
+.status.shut i{background:#9aa3b2}
+.big-tel{display:inline-block;font-family:var(--display);font-size:clamp(34px,4.4vw,48px);color:var(--navy);text-decoration:none;margin:10px 0 2px;font-variant-numeric:tabular-nums}
+.big-tel:hover{color:var(--orange)}
+.mail{color:var(--navy);font-weight:700;user-select:all}
+.addr{font-size:21px;font-weight:700;margin:6px 0 18px}
+@media (max-width:860px){.visit-grid{grid-template-columns:1fr}.card{padding:22px}}
+
+footer{background:var(--ink);color:#aab2c0;font-size:15px}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:24px}
+.foot a{text-decoration:none;margin-left:18px}
+
+.callbar{display:none}
+@media (max-width:920px){
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;gap:10px;background:#fff;border-top:1px solid var(--line);
+    padding:10px max(14px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px))}
+  .callbar .btn{flex:1;justify-content:center;padding:13px}
+  body{padding-bottom:80px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/></symbol>
+</svg>
+
+<div class="demo-note"><div class="wrap"><b>Entwurf</b> · Vorschlag für eine neue Website, mit Fotos und Texten von trendsalon-minden.de</div></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Trendsalon Petra Schröder, zur Startseite"><img class="logo" src="data:image/webp;base64,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" alt="Trendsalon Petra Schröder" onerror="this.remove()"><span><b>Trendsalon</b><small>Petra Schröder · Minden</small></span></a>
+    <ul>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#preise">Preise</a></li>
+      <li><a href="#fusspflege">Fußpflege</a></li>
+      <li><a href="#besuch">Öffnungszeiten</a></li>
+    </ul>
+    <a class="btn btn-orange" href="tel:+4957197204030"><svg class="i"><use href="#phone"/></svg><span>0571 97 20 40 30</span></a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="since"><b>seit 1989</b>Friseurmeisterin Petra Schröder</span>
+        <h1>Ihr Friseur in <span>Minden</span></h1>
+        <p>Schnitt, Farbe, Strähnen und Dauerwelle mit ehrlicher Beratung. Dazu Maniküre und medizinische Fußpflege unter einem Dach.</p>
+        <div class="ctas">
+          <a class="btn btn-navy" href="tel:+4957197204030"><svg class="i"><use href="#phone"/></svg>Termin anrufen</a>
+          <a class="btn btn-line" href="#preise">Preise ansehen</a>
+        </div>
+      </div>
+      <div class="hero-photos">
+        <figure class="ph"><img src="https://www.trendsalon-minden.de/Bilder/Trendsalon_11.jpg" alt="Blick in den Trendsalon" onerror="this.remove()"></figure>
+        <figure class="ph"><img src="https://www.trendsalon-minden.de/Bilder/Trendsalon_07.jpg" alt="Arbeitsplätze im Salon" onerror="this.remove()"></figure>
+        <figure class="ph"><img src="https://www.trendsalon-minden.de/Bilder/Trendsalon_08.jpg" alt="Der helle Salonraum" onerror="this.remove()"></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="info">
+    <div class="wrap">
+      <div class="cell"><small>Adresse</small><b>Greisenbruchstr. 16, 32423 Minden</b></div>
+      <div class="cell"><small id="todayLabel">Öffnungszeiten</small><b id="todayHours">Di–Fr 10–18 · Sa 9–13 Uhr</b></div>
+      <div class="cell"><small>Telefon</small><b><a href="tel:+4957197204030">0571 97 20 40 30</a></b></div>
+    </div>
+  </div>
+
+  <section id="team">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="kicker">Das Team</div><h2 style="margin-top:10px">Vertraute Gesichter</h2></div>
+        <p>Bei uns werden Sie von Menschen frisiert, die Sie kennen und die sich Zeit für Sie nehmen.</p>
+      </div>
+      <div class="team">
+        <div class="member"><div class="pic ph"><img src="https://www.trendsalon-minden.de/Bilder/Personal/IMG_2024_Petra.jpg" alt="Petra Schröder" loading="lazy" onerror="this.remove()"></div><h3>Petra Schröder</h3><p>Inhaberin</p><span class="tag">Friseurmeisterin seit 1989</span></div>
+        <div class="member"><div class="pic ph"><img src="https://www.trendsalon-minden.de/Bilder/Personal/IMG_2024_Britta_2.jpg" alt="Britta Droste" loading="lazy" onerror="this.remove()"></div><h3>Britta Droste</h3><p>Friseurin</p></div>
+        <div class="member"><div class="pic ph"><img src="https://www.trendsalon-minden.de/Bilder/Personal/IMG_2024_Claudia.jpg" alt="Claudia Zylfijaj" loading="lazy" onerror="this.remove()"></div><h3>Claudia Zylfijaj</h3><p>Assistenzkraft</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="wrap quote-grid">
+      <blockquote>Wir sind zufrieden, wenn Sie es sind</blockquote>
+      <div>
+        <p>Perfekter Schnitt, Farbe und Strähnentechnik verbinden Ihre Vorstellungen mit unseren Ideen und unserem Know-how.</p>
+        <p>Aktuelle Trends setzen wir immer passend zu Ihrem Typ und Ihrer Haarbeschaffenheit um. Deshalb ist eine gute Beratung für uns der Schlüssel zum Erfolg.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="preise">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="kicker">Preise</div><h2 style="margin-top:10px">Auszug aus unserer Preisliste</h2></div>
+        <p>Gerne erstellen wir Ihren persönlichen Kostenplan nach Ihren Wünschen. Sprechen Sie uns an.</p>
+      </div>
+      <div class="price-grid">
+        <div class="pcard">
+          <h3><i></i>Damen</h3>
+          <div class="prow"><span>Schnitt<small>inkl. Wellnessmassage und Shampoo</small></span><b>37,50 €</b></div>
+          <div class="prow"><span>Schnitt mit Frisur<small>inkl. Wellnessmassage, Shampoo und typgerechter Frisur</small></span><b class="multi">58,00 / 61,00 / 67,00 €</b></div>
+          <div class="prow"><span>Ansatzfarbe<small>inkl. Farbstabilisator</small></span><b>56,00 €</b></div>
+          <div class="prow"><span>Dauerwelle<small>inkl. Sprungkraftstabilisator, je nach Länge und Aufwand</small></span><b class="multi">59,50 – 115,00 €</b></div>
+          <div class="prow"><span>Maniküre komplett</span><b>47,00 €</b></div>
+        </div>
+        <div class="pcard">
+          <h3><i></i>Herren</h3>
+          <div class="prow"><span>Schnitt<small>inkl. Relaxmassage und Shampoo</small></span><b>37,50 €</b></div>
+          <div class="prow"><span>Schnitt mit Styling<small>inkl. Relaxmassage, Shampoo und Styling komplett</small></span><b>45,00 €</b></div>
+          <div class="notes" style="grid-template-columns:1fr;margin-top:18px">
+            <div class="note"><b>Geschenkgutscheine</b>erhalten Sie direkt bei uns im Salon.</div>
+            <div class="note"><b>Weitere Preise</b>zu Leistungen und Produkten erfragen Sie bitte im Salon.</div>
+          </div>
+        </div>
+      </div>
+      <p style="color:var(--muted);font-size:15px;margin:22px 0 0">Nach der Hygieneverordnung des Zentralverbands des Deutschen Friseurhandwerks werden Friseurleistungen nur an im Salon gewaschenen Haaren durchgeführt. Alle Preise ohne Gewähr, Änderungen vorbehalten.</p>
+    </div>
+  </section>
+
+  <section class="foot-care" id="fusspflege">
+    <div class="wrap fc-grid">
+      <div>
+        <div class="fc-photo ph"><img src="https://www.trendsalon-minden.de/Bilder/PIC_0013.JPG" alt="Behandlungsstuhl für die Fußpflege" loading="lazy" onerror="this.remove()"></div>
+        <div class="facts">
+          <div class="fact"><b>26</b><span>Knochen</span></div>
+          <div class="fact"><b>20</b><span>Muskeln</span></div>
+          <div class="fact"><b>114</b><span>Bänder</span></div>
+        </div>
+        <p style="font-size:16px">So viel steckt in einem einzigen Fuß. Statistisch läuft jeder Mensch im Leben viermal um die Erde.</p>
+      </div>
+      <div>
+        <div class="kicker">Fußpflege</div>
+        <h2 style="margin:10px 0 16px">Verwöhnen Sie Ihre Füße</h2>
+        <p>Medizinische Fußpflege ist mehr als Pediküre. Viele Fußprobleme lassen sich von einer speziell ausgebildeten Fachkraft beheben.</p>
+        <div class="fc-prices">
+          <div class="prow"><span>Fußpflege med.<small>inkl. Fußbad und Fußmassage</small></span><b>ab 32,00 €</b></div>
+          <div class="prow"><span>Fußpflege med.<small>inkl. hochwertigem Nagellack</small></span><b>40,00 €</b></div>
+          <div class="prow"><span>Fußpflege med.<small>inkl. French-Lack</small></span><b>42,00 €</b></div>
+          <div class="prow"><span>Fußbad &amp; Wellness<small>Fußmassage ca. 30 Min.</small></span><b>20,00 €</b></div>
+          <div class="prow"><span>Ohrkerzen setzen</span><b>20,00 €</b></div>
+        </div>
+        <p class="fc-contact"><b>Termine Fußpflege:</b> <a href="tel:+491772777299" class="sel">0177 277 7299</a> · <span class="sel">bettinam2013@gmail.com</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="besuch">
+    <div class="wrap visit-grid">
+      <div class="card">
+        <div class="kicker">Öffnungszeiten</div>
+        <table class="hours" id="hours">
+          <tr data-d="1" class="closed"><td>Montag</td><td>geschlossen</td></tr>
+          <tr data-d="2"><td>Dienstag</td><td>10:00 – 18:00</td></tr>
+          <tr data-d="3"><td>Mittwoch</td><td>10:00 – 18:00</td></tr>
+          <tr data-d="4"><td>Donnerstag</td><td>10:00 – 18:00</td></tr>
+          <tr data-d="5"><td>Freitag</td><td>10:00 – 18:00</td></tr>
+          <tr data-d="6"><td>Samstag</td><td>09:00 – 13:00</td></tr>
+          <tr data-d="0" class="closed"><td>Sonntag</td><td>geschlossen</td></tr>
+        </table>
+        <div class="status" id="status"><i></i><span></span></div>
+      </div>
+      <div class="card">
+        <div class="kicker">Kontakt</div>
+        <a class="big-tel" href="tel:+4957197204030">0571 97 20 40 30</a>
+        <p style="margin:0 0 18px">E-Mail: <span class="mail">info@trendsalon-minden.de</span></p>
+        <p class="addr">Greisenbruchstr. 16<br>32423 Minden</p>
+        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Greisenbruchstr.+16+32423+Minden" target="_blank" rel="noopener"><svg class="i"><use href="#pin"/></svg>Route in Google Maps</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Trendsalon Petra Schröder · Minden</span>
+    <span><a href="#">Impressum</a><a href="#">Datenschutz</a></span>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-orange" href="tel:+4957197204030"><svg class="i"><use href="#phone"/></svg>Anrufen</a>
+  <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Greisenbruchstr.+16+32423+Minden" target="_blank" rel="noopener"><svg class="i"><use href="#pin"/></svg>Route</a>
+</div>
+
+<script>
+(function(){
+  const hours={2:[10,18],3:[10,18],4:[10,18],5:[10,18],6:[9,13]};
+  const names=['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
+  const now=new Date(), d=now.getDay(), h=now.getHours()+now.getMinutes()/60, t=hours[d];
+  const row=document.querySelector('#hours tr[data-d="'+d+'"]'); if(row) row.classList.add('today');
+  const st=document.getElementById('status'), txt=st.querySelector('span');
+  if(t && h>=t[0] && h<t[1]) txt.textContent='Jetzt geöffnet bis '+t[1]+':00 Uhr';
+  else{
+    st.classList.add('shut');
+    let n=d; for(let k=0;k<7;k++){n=(n+1)%7; if(hours[n]) break;}
+    const later=t && h<t[0];
+    txt.textContent='Gerade geschlossen · öffnet '+(later?'heute':names[n])+' um '+(later?t[0]:hours[n][0])+':00 Uhr';
+  }
+  document.getElementById('todayLabel').textContent='Heute, '+names[d];
+  document.getElementById('todayHours').textContent=t?t[0]+':00 – '+t[1]+':00 Uhr':'Geschlossen';
+})();
+</script>
+</body>
+</html>
